@@ -1,6 +1,7 @@
 package com.microJava.microservice_java;
 
 import com.microJava.microservice_java.model.Empl_Data;
+import com.microJava.microservice_java.model.Fam_Data;
 import com.microJava.microservice_java.repository.Empl_Repo;
 import com.microJava.microservice_java.repository.Fam_Repo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,14 @@ public class MicroserviceJavaApplication implements CommandLineRunner {
 //		empl1.setId(1122255);
 //		empl1.setEmailId("rohantoaws@yahoo.com");
 //		emplRepo.save(empl1);
+
+//		Fam_Data f= new Fam_Data();
+//		f.setFirst_Name("sushant");
+//		f.setLast_Name("sourav");
+//		f.setSon_Of("amar");
+//		f.setAge(25);
+//		f.setPhone_No("7004192941");
+//		famRepo.save(f);
 
 
 	}
