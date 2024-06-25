@@ -14,6 +14,7 @@ import java.util.List;
     @RestController
     @RequestMapping("/api/v2/famdata")
     public class Fam_Controller {
+
     @Autowired
     private  Fam_Repo frepo;
 
@@ -21,20 +22,28 @@ import java.util.List;
 
     @GetMapping
     public List<Fam_Data> getAllFam(){
+
         return frepo.findAll();
     }
 
+
+
     @PostMapping
     public Fam_Data famCreate(@RequestBody Fam_Data fam_data){
+
         return frepo.save(fam_data);
 
     }
+
+
+
     @GetMapping("{id}")
     public ResponseEntity<Fam_Data> getFam_dataById( @PathVariable long id){
         Fam_Data fam_data=frepo.findById(id).orElseThrow(() -> new ResourceNotFoundException("Famliy data does not exist" + id));
         return ResponseEntity.ok(fam_data);
 
     }
+
 
 
     @PutMapping("{id}")

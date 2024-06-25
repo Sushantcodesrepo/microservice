@@ -34,6 +34,7 @@ public class Empl_controller {
 
   }
 
+
   //build get employee by ID REST API
   @GetMapping("{id}")
   public ResponseEntity<Empl_Data> getEmpl_dataById(@PathVariable long id){
@@ -54,6 +55,7 @@ public class Empl_controller {
   }
 
 
-
-
 }
+
+
+
