@@ -40,7 +40,7 @@ public class Fam_Acc_Controller {
     @PutMapping("{id}")
     public ResponseEntity<Fam_Account> updateFam_data(@PathVariable long id, @RequestBody Fam_Account updatefamdetails){
         Fam_Account updatefam_data=famAcc_repo.findById(id).orElseThrow(() -> new ResourceNotFoundException(" Familiy data not found" +  id));
-        updatefam_data.setAccount_Number(updatefamdetails.getAccount_Number());
+        updatefam_data.setAccount_Holder_Name(updatefamdetails.getAccount_Holder_Name());
         updatefam_data.setIFSC_Code(updatefamdetails.getIFSC_Code());
         updatefam_data.setBank_Name(updatefamdetails.getBank_Name());
         updatefam_data.setBranch_Code(updatefamdetails.getBranch_Code());

@@ -3,6 +3,7 @@ package com.microJava.microservice_java;
 import com.microJava.microservice_java.model.Empl_Data;
 import com.microJava.microservice_java.model.Fam_Data;
 import com.microJava.microservice_java.repository.Empl_Repo;
+import com.microJava.microservice_java.repository.FamAcc_Repo;
 import com.microJava.microservice_java.repository.Fam_Repo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -20,6 +21,12 @@ public class MicroserviceJavaApplication implements CommandLineRunner {
 
 	@Autowired
 	private Fam_Repo famRepo;
+
+	@Autowired
+	private  FamAcc_Repo famAccRepo;
+
+
+
 	@Override
 	public void run(String... args) throws Exception {
 //		Empl_Data empl=new Empl_Data();
@@ -43,6 +50,13 @@ public class MicroserviceJavaApplication implements CommandLineRunner {
 //		f.setAge(25);
 //		f.setPhone_No("7004192941");
 //		famRepo.save(f);
+		System.out.println("---------------------------------------------------------");
+
+		//famAccRepo.setTotalBal("856984885458",100);
+		System.out.println(famAccRepo.getTotalBal("856984885458"));
+		System.out.println("---------------------------------------------------------");
+
+
 
 
 	}
